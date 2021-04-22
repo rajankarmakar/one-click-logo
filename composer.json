@@ -1,0 +1,19 @@
+{
+  "name": "rajan/one-click-logo",
+  "description": "Change logo of the login page with a single click.",
+  "type": "wordpress-plugin",
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "rajankarmakar",
+      "email": "rajankarmakar@hotmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "OneClickLogo\\": "inc/"
+    }
+  }
+}
