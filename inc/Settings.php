@@ -12,9 +12,27 @@ class Settings {
     public function __construct() {
         add_action( 'admin_init', array( $this, 'add_settings_for_plugin' ) );
         $plugin_file = OCL_BASE_NAME;
+        add_action( 'admin_enqueue_scripts', array( $this, 'ocl_admin_assets' ) );
         add_filter( "plugin_action_links_{$plugin_file}", array( $this, 'add_settings_links' ) );
     }
 
+    /**
+     * Enqueuing admin assets.
+     *
+     * @return void
+     */
+    public function ocl_admin_assets() {
+        wp_enqueue_media();
+        wp_enqueue_script(
+            'ocl-media-js',
+            OCL_ASSETS . '/media.js',
+            array(
+				'jquery',
+            ),
+            time(),
+            true
+        );
+    }
     /**
      * Add settings page for the plugin
      *
@@ -64,11 +82,17 @@ class Settings {
         $url = get_option( 'ocl_url' );
 
         printf(
-            "<input class='regular-text' type='text' name='%s' id='%s' value='%s'",
+            "<input class='regular-text ocl_upload_image' type='text' name='%s' id='%s' value='%s' placeholder='%s' /> %s <button id='%s' style='height: 30px' class='page-title-action'>Upload Image</button>",
             esc_attr( 'ocl_url' ),
             esc_attr( 'ocl_url' ),
-            esc_attr( esc_url( $url ) )
+            esc_attr( esc_url( $url ) ),
+            esc_html__( 'Enter logo URL', 'one-click-logo' ),
+            esc_html__( 'or', 'one-click-logo' ),
+            esc_attr( 'ocl_upload_image' )
         );
+        if ( $url ) {
+            printf( "<div style='margin-top: 10px;'><img id='ocl-logo-image' src ='%s' style='border-radius: %s' / ></div>", esc_url_raw( $url ), '50%' );
+        }
     }
 
     /**
