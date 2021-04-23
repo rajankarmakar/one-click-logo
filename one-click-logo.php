@@ -26,7 +26,7 @@ if ( ! class_exists( 'One_Click_Logo' ) ) {
     final class One_Click_Logo {
         /**
          * Plugin version
-         * 
+         *
          * @var string version
          */
         const version = '1.0.0';
@@ -46,7 +46,7 @@ if ( ! class_exists( 'One_Click_Logo' ) ) {
 
         /**
          * Load plugins
-         * 
+         *
          * @return void
          */
         public function init_plugin() {
@@ -59,7 +59,7 @@ if ( ! class_exists( 'One_Click_Logo' ) ) {
 
         /**
          * Load plugin textdomain
-         * 
+         *
          * @return void
          */
         public function ocl_load_text_domain() {
@@ -68,11 +68,12 @@ if ( ! class_exists( 'One_Click_Logo' ) ) {
 
         /**
          * Define all necessary constants
-         * 
+         *
          * @return void
          */
         public function define_constants() {
             define( 'OCL_VERSION', self::version );
+            define( 'OCL_BASE_NAME', plugin_basename( __FILE__ ) );
             define( 'OCL_PATH', __DIR__ );
             define( 'OCL_FILE', __FILE__ );
             define( 'OCL_URL', plugins_url( '', OCL_FILE ) );
@@ -81,7 +82,7 @@ if ( ! class_exists( 'One_Click_Logo' ) ) {
 
         /**
          * Save plugin version and install time to db
-         * 
+         *
          * @return void
          */
         public function activate() {
@@ -96,7 +97,7 @@ if ( ! class_exists( 'One_Click_Logo' ) ) {
 
         /**
          * Initialize a singleton instance
-         * 
+         *
          * @return object \One_Click_Logo
          */
         public static function init() {
@@ -113,7 +114,7 @@ if ( ! class_exists( 'One_Click_Logo' ) ) {
 
 /**
  * Initialize the plugin
- * 
+ *
  * @return object \One_Click_Logo
  */
 function ocl_one_click_logo_boot() {
