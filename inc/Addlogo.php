@@ -15,7 +15,7 @@ class Addlogo {
 
     /**
      * Change logo for the login page
-     * 
+     *
      * @return void
      */
     public function change_logo() {
@@ -30,6 +30,7 @@ class Addlogo {
                     width: 150px;
                     background-size: 150px;
                     background-repeat: no-repeat;
+                    border-radius: 50%;
                 }
             </style>
             <?php
