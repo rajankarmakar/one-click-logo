@@ -69,7 +69,7 @@ class Settings {
     public function add_settings_section() {
         printf(
             "<p class='description'>%s</p>",
-            __( 'Please add an image url and you are good to go. Image dimension 150 x 150 pixel will be the best fit for logo', 'we-subscription-form' )
+            __( 'Please add an image url and you are good to go. Image dimension 150 x 150 pixel will be the best fit for logo', 'one-click-logo' )
         );
     }
 
@@ -103,7 +103,7 @@ class Settings {
      * @return mixed
      */
     public function add_settings_links( array $links ) {
-        $settings_links = "<a href='options-media.php#ocl_url'>Settings</a>";
+        $settings_links = sprintf( "<a href='options-media.php#ocl_url'>%s</a>", __( 'Settings', 'one-click-logo' ) );
         $settings_links = wp_kses(
             $settings_links,
             array(

@@ -1,0 +1,55 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: One Click Logo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-30 14:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.2; wp-5.7.1\n"
+"X-Domain: one-click-logo"
+
+#. Description of the plugin
+msgid "Change logo of the login page with a single click."
+msgstr ""
+
+#: inc/Settings.php:89
+msgid "Enter logo URL"
+msgstr ""
+
+#: inc/Settings.php:57
+msgid "Enter logo url"
+msgstr ""
+
+#. Name of the plugin
+msgid "One Click Logo"
+msgstr ""
+
+#: inc/Settings.php:50
+msgid "One Click Logo Settings"
+msgstr ""
+
+#: inc/Settings.php:90
+msgid "or"
+msgstr ""
+
+#: inc/Settings.php:72
+msgid ""
+"Please add an image url and you are good to go. Image dimension 150 x 150 "
+"pixel will be the best fit for logo"
+msgstr ""
+
+#. Author of the plugin
+msgid "Rajan Karmaker"
+msgstr ""
+
+#: inc/Settings.php:106
+msgid "Settings"
+msgstr ""
