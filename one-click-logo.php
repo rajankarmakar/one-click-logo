@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       One Click Logo
  * Description:       Change logo of the login page with a single click.
- * Version:           1.1.2
+ * Version:           1.1.3
  * Requires at least: 5.6
  * Requires PHP:      5.6
  * Author:            Rajan Karmaker
@@ -29,7 +29,7 @@ if ( ! class_exists( 'One_Click_Logo' ) ) {
          *
          * @var string version
          */
-        const version = '1.0.0';
+        const version = '1.1.3';
 
         /**
          * Class constructor
