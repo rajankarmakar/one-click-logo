@@ -25,13 +25,15 @@ class Settings {
         wp_enqueue_media();
         wp_enqueue_script(
             'ocl-media-js',
-            OCL_ASSETS . '/media.js',
+            OCL_ASSETS . '/js/media.js',
             array(
 				'jquery',
             ),
-            time(),
+            OCL_VERSION,
             true
         );
+
+        wp_enqueue_style( 'ocl-main-style', OCL_ASSETS . '/css/style.css', array(), OCL_VERSION );
     }
     /**
      * Add settings page for the plugin
@@ -91,7 +93,7 @@ class Settings {
             esc_attr( 'ocl_upload_image' )
         );
         if ( $url ) {
-            printf( "<div style='margin-top: 10px;'><img id='ocl-logo-image' src ='%s' style='border-radius: %s' / ></div>", esc_url_raw( $url ), '50%' );
+            printf( "<div class='ocl-logo-image-wrap'><img id='ocl-logo-image' class='ocl-logo-image' src ='%s' /></div>", esc_url_raw( $url ) );
         }
     }
 
